@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+.container{
+    /*flexbox needs container not controlling children*/
+    display: flex;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background: lightcoral;
+    color: white;
+}

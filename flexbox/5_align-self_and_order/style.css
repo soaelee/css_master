@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.container{
+    /*flexbox는 container를 이용하고, children의 위치를 직접 컨트롤 하진 않는다*/
+    display: flex;
+    /*Main Axis*/
+    justify-content: space-between;
+    height: 100vh;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background: lightcoral;
+    color: white;
+    font-size: 18px;
+}
+/*NOTE: Father must has own height*/
+/*align-self는 align-items와 비슷하지만 한 가지의 자식에 대해서만 위치를 적용함*/
+.box:nth-child(2) {
+    /*Cross Axis*/
+    height: unset;
+    align-self: stretch;
+    order: 1;
+}
+
+.box:last-child {
+    align-self: center;
+}
+
+.box:first-child {
+    order: 2;
+}

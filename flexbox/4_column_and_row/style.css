@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.container{
+    /*flexbox는 container를 이용하고, children의 위치를 직접 컨트롤 하진 않는다*/
+    display: flex;
+    /*flex-direction이 column일 경우에는 main-axis가 세로축, cross-axis가 가로축이 된다*/
+    flex-direction: column;
+    /*Main Axis*/
+    justify-content: space-between;
+    /*Cross Axis*/
+    align-items: center;
+    height: 100vh;
+
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background: lightcoral;
+    color: white;
+}

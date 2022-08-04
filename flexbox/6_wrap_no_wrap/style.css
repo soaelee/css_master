@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.container{
+    /*flexbox는 container를 이용하고, children의 위치를 직접 컨트롤 하진 않는다*/
+    display: flex;
+    /*Main Axis*/
+    justify-content: space-around;
+    height: 150vh;
+    /*flexbox는 children이 너비가 바뀌더라도 모두 한 줄에 있도록 유지하는 것이 기본*/
+
+    /*flex-wrap default value is no-wrap*/
+        /*wrap은 flexbox children의 크기를 유지하도록 함*/
+    flex-wrap: wrap;
+
+    /*align-content는 cross-axis, children사이의 line을 조종*/
+    align-content: center;
+}
+.box{
+    width: 350px;
+    height: 350px;
+    background: lightcoral;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

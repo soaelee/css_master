@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+.container{
+    /*flexbox는 container를 이용하고, children의 위치를 직접 컨트롤 하진 않는다*/
+    display: flex;
+    /* flex-direction이 main-axis의 방향을 결정한다. default가 row이기 때문에 main axis는 가로, 즉 수평축*/
+    
+    /*justify-content는 수평축에 있는 children의 위치 변경: main axis*/
+        /*space-around는 각 요소들이 같은 공간을 같게함*/
+    justify-content: space-around;
+
+    /*align-items는 세로축에 있는 children의 위치를 변경: cross axis*/
+    /*align-items: center; default: flex-start*/
+        /*cross-axis를 center로 뒀을때 부모의 높이와 자식의 높이가 같으면 아무런 변화도 보이지 않음*/
+    height: 100vh;
+    align-items: stretch;
+
+}
+.box{
+    width: 100px;
+    /*height: 100px;*/
+    background: lightcoral;
+    color: white;
+}

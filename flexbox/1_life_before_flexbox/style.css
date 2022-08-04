@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+.box{
+    background: lightpink;
+    width: 300px;
+    height: 300px;
+    color: white;
+    text-align: center;
+    margin-bottom: 2px;
+    /* inline은 block이 아니기때문에 width, height을 가질 수 없음 */
+    display: inline-block;
+}
