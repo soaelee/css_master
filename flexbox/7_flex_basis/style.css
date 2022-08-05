@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.container {
+  /*flexbox는 container를 이용하고, children의 위치를 직접 컨트롤 하진 않는다*/
+  display: flex;
+  /*Main Axis*/
+  justify-content: space-around;
+  width: 100vw;
+  height: 200vh;
+  align-items: center;
+  /* flex-direction: column; */
+}
+
+/* flex-basis는 child에게 줄 수 있는 속성 */
+/* 이제 width를 사용하지 않음! */
+/* flex-basis === main-axis === direction is row */
+.box {
+  /* width와 같아보이지만 element의 초기 크기를 지정하는것 */
+  flex-basis: 30%;
+  width: 100%;
+  background: lightcoral;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:nth-child(2) {
+  background: lightgray;
+  flex-grow: 1;
+}
+
+.box:last-child {
+  flex-grow: 3;
+}
