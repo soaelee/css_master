@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    /* grid의 규칙은 flex와 유사하다 > container에서 작동 */
+    display: grid;
+    /* grid-template-columns: 33% 33% 33%; */
+    /* Column */
+    grid-template-columns: 250px 250px 250px;
+    /* column-gap: 10px;
+    row-gap: 10px; */
+    grid-template-rows: 20px 39px ;
+    gap: 10px;
+}
+.box{
+    background: lightpink;
+    color: white;
+    text-align: center;
+}

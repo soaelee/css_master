@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.box{
+    background: lightpink;
+    /* box는 4개인데 3열을 만들고 싶을때 */
+    flex-basis: 30%;
+    height: 300px;
+    color: white;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+/* 격자무늬가 완성이 안됨 */
+.box:last-child {
+    margin-top: 10px;
+}

@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    color: white;
+    font-size: 15px;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+    height: 100vh;
+    /* fr은 가능한 공간을 뜻한다. 3fr 1fr 1fr할 경우, 가능한 공간의 3/5 차지 */
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* grid-template-rows: repeat(4, 1fr); */
+
+    /* Grid-Template: row의 이름 row의 높이 / 마지막엔 각 column의 크기 */
+    grid-template: 
+    "header header header header" 1fr
+    "content content content nav" 2fr
+    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr;
+}
+
+.header {
+    background-color: lightblue;
+    grid-area: header;
+}
+.content {
+    background-color: lightcoral;
+    grid-area: content;
+}
+.nav {
+    background-color: lightgreen;
+    grid-area: nav;
+}
+.footer {
+    background-color: lightsalmon;
+    grid-area: footer;
+}
