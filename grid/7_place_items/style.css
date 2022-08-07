@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    color: white;
+    font-size: 15px;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+    /* Justify-items's default value is stretch */
+    /* justify-items:stretch; */
+    /* Align-items's default valus is stretch */
+    /* align-items: stretch; */
+
+    /* 지름길 : 수평, 수직 */
+    place-items: center stretch;
+}
+
+.header {
+    background-color: lightblue;
+    /* 자식에게 기본 크기가 정해져있으면 stretch 되지 않음 */
+    /* height: 40px;
+    width: 40px; */
+}
+.content {
+    background-color: lightcoral;
+}
+.nav {
+    background-color: lightgreen;
+}
+.footer {
+    background-color: lightsalmon;
+}

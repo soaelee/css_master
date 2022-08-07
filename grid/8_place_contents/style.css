@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    color: white;
+    font-size: 15px;
+}
+
+.container {
+    display: grid;
+    gap: 5px;
+    background-color: beige;
+    height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 1fr);
+    /* content는 grid를 전체 움직이게 된다 */
+    /* default valus is center */
+    justify-content: center; 
+    /* align-content: stretch; */
+}
+
+.header {
+    background-color: lightblue;
+}
+.content {
+    background-color: lightcoral;
+}
+.nav {
+    background-color: lightgreen;
+}
+.footer {
+    background-color: lightsalmon;
+}
