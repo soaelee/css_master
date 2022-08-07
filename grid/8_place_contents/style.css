@@ -13,8 +13,6 @@
     grid-template-rows: repeat(4, 1fr);
     /* content는 grid를 전체 움직이게 된다 */
     /* default valus is center */
-    justify-content: center; 
-    /* align-content: stretch; */
 }
 
 .header {

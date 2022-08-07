@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    color: white;
+    font-size: 15px;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+    /* 1fr은 사이즈가 들어들 경우, 가능한 공간을 나타내기 때문에 엄청 작아질 수도 있다. */
+    /* 이때 element가 최소한의 값은 유지했으면, 혹은 최대한의 값은 가지고 있기를 바랄 때, minmax를 사용한다 */
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-rows: repeat(4, 100px);
+    grid-auto-rows: 100px;
+}
+
+.item:nth-child(odd) {
+    background-color: lightblue;
+}
+
+.item:nth-child(even) {
+    background-color: lightcoral;
+}

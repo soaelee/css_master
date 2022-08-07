@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    color: white;
+    font-size: 15px;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    /* 정해진 row보다 많은 row가 생길 경우 row의 default 사이즈를 지정 */
+    /* grid-auto-rows: 100px; */
+    /* 그런데 만약 더 많은 row가 생길 경우, column으로 생성되게 하고 싶다면? */
+    /* grid-auto-flow로 column으로 흐름을 바꾸고, auto-columns으로 default 사이즈 지정하기 */
+    grid-auto-flow: column;
+    grid-auto-columns: 150px;
+}
+
+.item:nth-child(odd) {
+    background-color: lightblue;
+}
+
+.item:nth-child(even) {
+    background-color: lightcoral;
+}
+
+.header {
+    background-color: lightblue;
+    /* self는 child에게 허용된 property */
+    /* align-self: end;
+    justify-self: center; */
+}

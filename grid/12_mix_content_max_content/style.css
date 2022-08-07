@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    /* color: white; */
+    font-size: 15px;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+    /* box의 크기를 content에 맞춤
+    browser가 content를 보고 box의 크기를 맞춰줌
+    1. min-content: content의 크기를 최대한 줄이고, cell의 크기를 content에 맞춘다.
+    2. max-content: content의 크기 만큼 cell의 크기를 늘린다.
+    ex)
+    grid-template-columns: repeat(5, minmax(min-content, 1fr));
+
+    grid-template-columns: repeat(auto-fill, minmax(20px, max-content));
+    */
+    /* grid-template-columns: max-content min-content; */
+    /* grid-template-columns: repeat(5, minmax(max-content, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(20px, max-content));
+    grid-auto-rows: 100px;
+}
+
+.item {
+    background-color: lightblue;
+}

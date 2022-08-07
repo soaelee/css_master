@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    /* color: white; */
+    font-size: 15px;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+.item {
+    background-color: lightblue;
+}
+
+
+.container:first-child {
+    /* auto-fit: 빈 공간을 생성하지 않고 현재 item들이 빈 공간없이 채워지도록 만든다. */
+    /* 유동적인 사이즈 */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.container:last-child {
+    /* auto-fill: 가능한 한 많이 column의 수를 만들어 낸다. 브라우저의 크기를 바꾸어도 item들의 크기가 그대로이다. */
+    /* 정확한 사이즈 */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
